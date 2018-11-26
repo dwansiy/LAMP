@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LAMP</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <string name="empty_year_tax">등록된 내역이 없습니다.\n등록하기 버튼을 눌러 연말정산을 등록해주세요!</string>
+    <string name="error_common">알 수 없는 에러가 발생했습니다. 잠시 후 다시 시도해주세요</string>
+    <string name="comming_soon">준비중인 기능입니다.</string>
+
+    <string name="menu_nav_cfp">전문 컨설턴트 신청</string>
+    <string name="menu_nav_tax">간편 연말정산</string>
+    <string name="menu_nav_item">상품 추천</string>
+    <string name="menu_nav_information">정보/문의</string>
+    <string name="menu_nav_review">평점과 리뷰쓰기</string>
+    <string name="menu_nav_report">버그 신고 및 제안</string>
+    <string name="menu_nav_version">버전 확인</string>
+    <string name="menu_nav_etc">기타</string>
+    <string name="menu_nav_term_service">서비스 이용약관</string>
+    <string name="menu_nav_term_private">개인정보 처리방침</string>
+    <string name="menu_nav_open_source">오픈소스 라이센스</string>
+
+    <!-- 버그 제보 -->
+    <string name="report_body">OS Version : %s\nApp Version : %s\n\n\n</string>
+
+    <!-- 간편 연말정산 -->
+    <string name="title_activity_tax">간편 연말정산</string>
+    <string name="error_field_required">잘못된 형식입니다</string>
+    <string name="helper_total_salary">홈택스 21번 \'총 급여\'의 수치를 입력해주세요 (단위: 원)</string>
+    <string name="helper_retirement_pension">홈택스 68번 \'근로자퇴직급여 보정법에 따른 퇴직연금\'의 공제대상금액을 입력해주세요 (단위: 원)</string>
+    <string name="helper_saving_pension">홈택스 59번 \'연금저축\'의 공제대상금액을 입력해주세요 (단위: 원)</string>
+    <string name="helper_insurance">홈택스 60번 \'보험료 - 보장성\'의 공제대상금액을 입력해주세요\n장애인일 경우 체크를 선택하고, \'보험료 - 장애인 전용 보장성\'의 공제대상금액을 입력해주세요  (단위: 원)</string>
+    <string name="helper_finalized_tax">홈택스 71번 \'결정세액\'의 수치를 입력해주세요 (단위: 원)</string>
+</resources>
