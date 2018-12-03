@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_container"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,188 +11,14 @@
         tools:showIn="@layout/app_bar_main"
         tools:context=".ui.MainActivity">
 
-    <ImageView
-            android:id="@+id/iv_background"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:src="@drawable/img_dummy_1"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="1.4"
-            tools:ignore="ContentDescription"/>
-
-    <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@color/colorNavyTransparent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="1.4"/>
-
     <LinearLayout
-            android:padding="30dp"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="1.4">
-
-        <Space
-                android:layout_weight="0.7"
-                android:layout_width="0dp"
-                android:layout_height="0dp"/>
-
-        <com.xema.lamp.widget.FontTextView
-                app:font_name="nanum_b.ttf"
-                android:textSize="20sp"
-                android:textColor="@color/colorWhite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="전문 컨설턴트 서비스"/>
-
-        <Space
-                android:layout_weight="0.1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"/>
-
-        <com.xema.lamp.widget.FontTextView
-                app:font_name="nanum.ttf"
-                android:textSize="14sp"
-                android:textColor="@color/colorWhite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CFP 자격증 소지, 전문 재무설계관리사 서비스"/>
-
-        <Space
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"/>
-
-        <Button
-                android:id="@+id/btn_consultant"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="지금 신청하기"
-                android:textColor="@color/colorWhite"
-                android:background="@drawable/selector_solid_navy"/>
-    </LinearLayout>
-
-    <android.support.v7.widget.CardView
-            android:id="@+id/cv_tax_container"
-            android:layout_width="0dp"
-            app:cardCornerRadius="6dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:contentPadding="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_background"
-            android:layout_height="wrap_content">
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-
-            <TextView
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:includeFontPadding="false"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/colorGray1"
-                    android:text="2018"
-                    android:textStyle="bold"
-                    android:textSize="23sp"
-                    android:layout_height="wrap_content"/>
-
-            <TextView
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:textStyle="bold"
-                    android:includeFontPadding="false"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/colorGray2"
-                    android:text="나의 연말정산 내역"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"/>
-
-            <View
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/colorGray3"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"/>
-
-            <TextView
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="@color/colorGray3"
-                    android:textSize="14sp"
-                    android:text="@string/empty_year_tax"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-
-            <LinearLayout
-                    android:layout_marginTop="6dp"
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                        android:id="@+id/btn_tax_register"
-                        android:textColor="@color/colorNavy"
-                        android:background="?attr/selectableItemBackground"
-                        android:text="등록하기"
-                        android:padding="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                <TextView
-                        android:id="@+id/btn_tax_help"
-                        android:textColor="@color/colorNavy"
-                        android:background="?attr/selectableItemBackground"
-                        android:text="도움말"
-                        android:padding="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <com.xema.lamp.widget.FontTextView
-            android:id="@+id/tv_weekly_news"
-            app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@color/colorGray0"
-            app:font_name="museo_r.ttf"
-            android:layout_margin="12dp"
-            android:textSize="24dp"
-            android:text="WEEKLY NEWS"
-            app:layout_constraintTop_toBottomOf="@+id/cv_tax_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    <LinearLayout
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_weekly_news"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView
+                android:id="@+id/cv_tax_container"
                 android:layout_width="match_parent"
                 app:cardCornerRadius="6dp"
                 android:layout_marginStart="12dp"
@@ -199,6 +26,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 app:contentPadding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_background"
                 android:layout_height="wrap_content">
 
             <LinearLayout
@@ -210,20 +40,23 @@
                         android:layout_marginTop="4dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
+                        android:includeFontPadding="false"
                         android:layout_width="wrap_content"
                         android:textColor="@color/colorGray1"
-                        android:text="美 10년물 금리 3.23% 돌파…\n4%까지 오르나"
+                        android:text="2018"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="23sp"
                         android:layout_height="wrap_content"/>
 
                 <TextView
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
                         android:layout_width="wrap_content"
-                        android:textColor="@color/colorGray4"
-                        android:text="2018-11-26"
-                        android:textSize="14sp"
+                        android:textColor="@color/colorGray2"
+                        android:text="나의 연말정산 내역"
+                        android:textSize="15sp"
                         android:layout_height="wrap_content"/>
 
                 <View
@@ -234,19 +67,66 @@
                         android:layout_height="2dp"/>
 
                 <TextView
+                        android:id="@+id/tv_tax_report"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
                         android:textColor="@color/colorGray3"
                         android:textSize="14sp"
-                        android:text="7년만에 또 최고 경신.  미국 강력한 고용지표. 12월 기준금리 인상 유력."
+                        android:text="@string/empty_year_tax"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
+
+                <LinearLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/btn_tax_register"
+                            android:textColor="@color/colorNavy"
+                            android:background="?attr/selectableItemBackground"
+                            android:text="등록하기"
+                            android:padding="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/btn_tax_help"
+                            android:textColor="@color/colorNavy"
+                            android:background="?attr/selectableItemBackground"
+                            android:text="도움말"
+                            android:visibility="gone"
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
+        <com.xema.lamp.widget.FontTextView
+                android:id="@+id/tv_weekly_news"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/colorGray0"
+                app:font_name="museo_r.ttf"
+                android:layout_margin="12dp"
+                android:textSize="24dp"
+                android:text="WEEKLY NEWS"
+                app:layout_constraintTop_toBottomOf="@+id/cv_tax_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_news"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weekly_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

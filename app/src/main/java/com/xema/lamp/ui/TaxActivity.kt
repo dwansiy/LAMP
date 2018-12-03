@@ -1,10 +1,13 @@
 package com.xema.lamp.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils
 import android.widget.Toast
 
 import com.xema.lamp.R
+import com.xema.lamp.common.PreferenceHelper
 import com.xema.lamp.data.Tax
 
 import kotlinx.android.synthetic.main.activity_tax.*
@@ -44,8 +47,43 @@ class TaxActivity : AppCompatActivity() {
     }
 
     private fun attemptDone() {
+        edt_total_salary.error = null
+        edt_retirement_pension.error = null
+        edt_saving_pension.error = null
+        edt_insurance.error = null
+        edt_finalized_tax.error = null
 
         try {
+            if (TextUtils.isEmpty(edt_total_salary.text)) {
+                edt_total_salary.error = "총 급여를 입력해주세요"
+                edt_total_salary.requestFocus()
+                return
+            }
+
+            if (TextUtils.isEmpty(edt_retirement_pension.text)) {
+                edt_retirement_pension.error = "퇴직연금을 입력해주세요"
+                edt_retirement_pension.requestFocus()
+                return
+            }
+
+            if (TextUtils.isEmpty(edt_saving_pension.text)) {
+                edt_saving_pension.error = "연금저축을 입력해주세요"
+                edt_saving_pension.requestFocus()
+                return
+            }
+
+            if (TextUtils.isEmpty(edt_insurance.text)) {
+                edt_insurance.error = "보장성 보험 금액를 입력해주세요"
+                edt_insurance.requestFocus()
+                return
+            }
+
+            if (TextUtils.isEmpty(edt_finalized_tax.text)) {
+                edt_finalized_tax.error = "결정세액을 입력해주세요"
+                edt_finalized_tax.requestFocus()
+                return
+            }
+
             val totalSalary = edt_total_salary.text.toString().toLong()
             val retirementPension = edt_retirement_pension.text.toString().toLong()
             val savingPension = edt_saving_pension.text.toString().toLong()
@@ -54,11 +92,22 @@ class TaxActivity : AppCompatActivity() {
             val finalizedTax = edt_finalized_tax.text.toString().toLong()
 
             val tax = Tax(totalSalary, retirementPension, savingPension, isHandicapped, insurance, finalizedTax)
-            Toast.makeText(this@TaxActivity, tax.toString(), Toast.LENGTH_LONG).show()
+            //Toast.makeText(this@TaxActivity, tax.toString(), Toast.LENGTH_LONG).show()
+
+            //val intent = Intent(this@TaxActivity, TaxResultActivity::class.java)
+            //intent.putExtra("data", tax)
+            //startActivity(intent)
+            //finish()
+
+            PreferenceHelper.saveTax(this@TaxActivity, tax)
+
+            val dialog = TaxResultDialog(this@TaxActivity, tax)
+            //dialog.setCanceledOnTouchOutside(false)
+            dialog.show()
 
         } catch (e: NumberFormatException) {
             //TODO : 예외처리
-            Toast.makeText(this@TaxActivity, R.string.error_common, Toast.LENGTH_LONG).show()
+            Toast.makeText(this@TaxActivity, "잘못된 입력형식입니다. 다시 한번 확인해주세요", Toast.LENGTH_LONG).show()
         }
 
         /*

@@ -12,10 +12,12 @@
                 android:id="@+id/menu_nav_tax"
                 android:icon="@drawable/ic_tax"
                 android:title="@string/menu_nav_tax"/>
+        <!--
         <item
                 android:id="@+id/menu_nav_item"
                 android:icon="@drawable/ic_item"
                 android:title="@string/menu_nav_item"/>
+                -->
     </group>
 
     <item android:title="@string/menu_nav_information">

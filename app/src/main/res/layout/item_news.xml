@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:contentPadding="16dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorGray1"
+                tools:text="美 10년물 금리 3.23% 돌파…\n4%까지 오르나"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_date"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorGray4"
+                tools:text="2018-11-26"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+
+        <View
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorGray3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        <TextView
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/colorGray3"
+                android:textSize="14sp"
+                android:id="@+id/tv_description"
+                tools:text="7년만에 또 최고 경신.  미국 강력한 고용지표. 12월 기준금리 인상 유력."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -30,6 +30,10 @@
                 android:name=".ui.TaxActivity"
                 android:label="@string/title_activity_tax">
         </activity>
+        <activity android:name=".ui.TaxResultActivity">
+        </activity>
+        <activity android:name=".ui.CfpActivity">
+        </activity>
     </application>
 
 </manifest>

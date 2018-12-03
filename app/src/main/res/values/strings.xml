@@ -28,6 +28,20 @@
     <string name="helper_total_salary">홈택스 21번 \'총 급여\'의 수치를 입력해주세요 (단위: 원)</string>
     <string name="helper_retirement_pension">홈택스 68번 \'근로자퇴직급여 보정법에 따른 퇴직연금\'의 공제대상금액을 입력해주세요 (단위: 원)</string>
     <string name="helper_saving_pension">홈택스 59번 \'연금저축\'의 공제대상금액을 입력해주세요 (단위: 원)</string>
-    <string name="helper_insurance">홈택스 60번 \'보험료 - 보장성\'의 공제대상금액을 입력해주세요\n장애인일 경우 체크를 선택하고, \'보험료 - 장애인 전용 보장성\'의 공제대상금액을 입력해주세요  (단위: 원)</string>
+    <string name="helper_insurance">홈택스 60번 \'보험료 - 보장성\'의 공제대상금액을 입력해주세요\n장애인일 경우 체크를 선택하고, \'보험료 - 장애인 전용 보장성\'의
+        공제대상금액을 입력해주세요 (단위: 원)
+    </string>
     <string name="helper_finalized_tax">홈택스 71번 \'결정세액\'의 수치를 입력해주세요 (단위: 원)</string>
+
+    <!-- 연말정산 결과 -->
+    <string name="result_total_salary">총급여가 5,500만원 %s입니다.</string>
+    <string name="result_finalized_tax">결정세액 %s만원 중에서\n다음과 같이 공제가 가능합니다.</string>
+    <string name="result_insurance">보장성보험 :</string>
+    <string name="result_saving_pension">연금저축 :</string>
+    <string name="result_retirement_pension">퇴직연금 :</string>
+    <string name="result_help">공제 상품 안내를 위해\n재무 상담을 받아보시겠습니까?</string>
+    <string name="result_help_yes">받아보기</string>
+    <string name="result_help_no">아니오</string>
+
+    <string name="format_meeting">총 급여: %s\n결정세액: %s\n퇴직연금: %s\n연금저축: %s\n장애인 여부 : %s\n보장성 보험 : %s\n등록일 : %s</string>
 </resources>

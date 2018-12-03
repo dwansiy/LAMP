@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:animateLayoutChanges="true"
+        android:layout_width="330dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_width="64dp"
+            android:layout_height="64dp"/>
+
+    <TextView
+            android:layout_marginTop="4dp"
+            android:text="보고서 생성중입니다..."
+            android:textColor="@color/colorGray1"
+            android:textSize="16sp"
+            android:id="@+id/tv_loading"
+            android:layout_marginBottom="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText"/>
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/ic_document"/>
+
+            <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="2dp"
+                    tools:text="2018.02.22"
+                    android:maxLines="1"
+                    android:textColor="@color/colorGray1"
+                    android:textSize="13sp"/>
+        </LinearLayout>
+
+        <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title"
+                android:text="GUEST님의 연말정산 보고서입니다"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorGray1"
+                android:textSize="17sp"/>
+
+        <TextView
+                android:id="@+id/tv_total_salary"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorGray1"
+                android:textSize="16sp"
+                android:text="@string/result_total_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_finalized_tax"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorGray1"
+                android:textSize="16sp"
+                android:text="@string/result_finalized_tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/colorGray1"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/result_insurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_insurance"
+                    android:textColor="@color/colorRedDark"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/colorGray1"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/result_saving_pension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_saving_pension"
+                    android:textColor="@color/colorRedDark"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/colorGray1"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/result_retirement_pension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_retirement_pension"
+                    android:textColor="@color/colorRedDark"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorGray1"
+                android:textSize="16sp"
+                android:text="@string/result_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/btn_yes"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="@string/result_help_yes"
+                android:background="@drawable/selector_solid_navy"
+                android:layout_width="140dp"
+                android:layout_height="40dp"/>
+
+    </LinearLayout>
+</LinearLayout>

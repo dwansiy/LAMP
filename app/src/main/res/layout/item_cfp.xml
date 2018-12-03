@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp">
+
+            <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_cfp_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:src="@color/colorWhite"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="100dp"
+                    android:layout_width="70dp"
+                    app:riv_border_width="1px"
+                    app:riv_border_color="@color/colorGray4"
+                    android:layout_height="70dp"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/riv_profile"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:src="@drawable/ic_profile_default"
+                    android:layout_width="70dp"
+                    app:riv_corner_radius="100dp"
+                    android:layout_height="70dp"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        tools:text="안도원"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorGray1"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:textColor="@color/colorGray4"
+                        android:textSize="14sp"
+                        android:text="컨설턴트"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <RatingBar
+                        android:theme="@style/ratingBarTheme"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_marginEnd="4dp"
+                        android:id="@+id/rb_rating"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_rating"
+                        android:textColor="@color/colorGray5"
+                        android:textSize="13sp"
+                        tools:text="4.8 / 5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        app:srcCompat="@drawable/ic_licence"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/tv_licence"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        tools:text="CFP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        app:srcCompat="@drawable/ic_email"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/tv_email"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        tools:text="asdnasd2@naver.com"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        app:srcCompat="@drawable/ic_office"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"/>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/tv_career"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGray3"
+                        tools:text="메트라이프 생명 4년, VALUE MARK 재직 중"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+                android:textSize="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/btn_contact"
+                android:textColor="@color/colorNavy"
+                android:background="?attr/selectableItemBackground"
+                android:text="연락하기"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,SpUsage"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
