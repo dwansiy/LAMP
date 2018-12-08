@@ -47,9 +47,10 @@
                         android:imeOptions="actionNext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="75833430"
                         android:hint="총급여"
                         android:inputType="number"
-                        android:maxLines="1"/>
+                        android:maxLines="1" tools:ignore="HardcodedText"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -65,10 +66,11 @@
                         android:id="@+id/edt_retirement_pension"
                         android:imeOptions="actionNext"
                         android:layout_width="match_parent"
+                        android:text="0"
                         android:layout_height="wrap_content"
                         android:hint="퇴직연금"
                         android:inputType="numberDecimal"
-                        android:maxLines="1"/>
+                        android:maxLines="1" tools:ignore="HardcodedText"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -85,9 +87,10 @@
                         android:id="@+id/edt_saving_pension"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="4000000"
                         android:hint="연금저축"
                         android:inputType="numberDecimal"
-                        android:maxLines="1"/>
+                        android:maxLines="1" tools:ignore="HardcodedText"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -114,8 +117,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="보장성 보험"
+                        android:text="1000000"
                         android:inputType="numberDecimal"
-                        android:maxLines="1"/>
+                        android:maxLines="1" tools:ignore="HardcodedText"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -134,9 +138,10 @@
                         android:layout_width="match_parent"
                         android:id="@+id/edt_finalized_tax"
                         android:layout_height="wrap_content"
+                        android:text="4220956"
                         android:hint="결정세액"
                         android:inputType="numberDecimal"
-                        android:maxLines="1"/>
+                        android:maxLines="1" tools:ignore="HardcodedText"/>
 
             </android.support.design.widget.TextInputLayout>
 

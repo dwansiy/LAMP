@@ -1,6 +1,8 @@
 package com.xema.lamp.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +27,9 @@ class NewsAdapter(private val context: Context, private val list: List<News>) :
         holder.tvDescription.text = news.description
         //holder.tvDate.text = DateFormat.getDateInstance(DateFormat.FULL).format(news.date)
         holder.tvDate.text = news.date
+        holder.llContainer.setOnClickListener {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(news.url)))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -35,6 +40,7 @@ class NewsAdapter(private val context: Context, private val list: List<News>) :
         val tvTitle = itemView.tv_title
         val tvDescription = itemView.tv_description
         val tvDate = itemView.tv_date
+        val llContainer = itemView.ll_container
 
     }
 }

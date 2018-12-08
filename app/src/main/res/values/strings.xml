@@ -44,4 +44,6 @@
     <string name="result_help_no">아니오</string>
 
     <string name="format_meeting">총 급여: %s\n결정세액: %s\n퇴직연금: %s\n연금저축: %s\n장애인 여부 : %s\n보장성 보험 : %s\n등록일 : %s</string>
+
+    <string name="dummy_my_profile">이름 : 김XX\n연락처 : 010-XXXX-XXXX\n한달 저축여력 : 매월 150만원\n관심상품 : 퇴직연금</string>
 </resources>

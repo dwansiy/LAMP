@@ -11,7 +11,7 @@ data class Tax(
     val isHandicapped: Boolean,
     val insurance: Long,
     val finalizedTax: Long,
-    val createdDate :Date = Date()
+    val createdDate: Date = Date()
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readLong(),
@@ -28,18 +28,24 @@ data class Tax(
     }
 
     fun getFinalInsurance(): Long {
-        return if (isHandicapped) (insurance * 15 / 100)
-        else (insurance * 12 / 100)
+        val max = 1000000
+        val result = if (isHandicapped) (max - insurance) * 12 / 100
+        else (max - insurance) * 15 / 100
+        return if (result < 0) 0 else result
     }
 
     fun getFinalSavingPension(): Long {
-        return if (isTotalOver5500()) (savingPension * 12 / 100)
-        else (savingPension * 15 / 100)
+        val max = 4000000
+        val result = if (isTotalOver5500()) (max - savingPension) * 12 / 100
+        else (max - savingPension) * 15 / 100
+        return if (result < 0) 0 else result
     }
 
     fun getFinalRetirePension(): Long {
-        return if (isTotalOver5500()) (retirementPension * 12 / 100)
-        else (retirementPension * 15 / 100)
+        val max = 3000000
+        val result = if (isTotalOver5500()) (max - retirementPension) * 12 / 100
+        else (max - retirementPension) * 15 / 100
+        return if (result < 0) 0 else result
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

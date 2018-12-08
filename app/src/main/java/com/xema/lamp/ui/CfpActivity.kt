@@ -29,7 +29,7 @@ class CfpActivity : AppCompatActivity() {
     }
 
     private fun setUpAdapter() {
-        val adapter = CfpAdapter(this@CfpActivity,makeDummies())
+        val adapter = CfpAdapter(this@CfpActivity, makeDummies())
         rv_cfp.layoutManager = LinearLayoutManager(this@CfpActivity, RecyclerView.VERTICAL, false)
         rv_cfp.adapter = adapter
         adapter.notifyDataSetChanged()
@@ -43,15 +43,15 @@ class CfpActivity : AppCompatActivity() {
             Arrays.asList("메트라이트 생명 2년", "VALUE MARK 재직 중"),
             4.5f,
             "do_peach520@naver.com",
-            R.drawable.ic_profile_default
+            R.drawable.img_cfp_ahn
         )
         val two = Cfp(
             "윤승일",
             Arrays.asList("CFP"),
             Arrays.asList("메트라이트 생명 4년", "VALUE MARK 재직 중"),
             4.8f,
-            "rhvx@naver.com",
-            R.drawable.ic_profile_default
+            "sogotwo@gmail.com",
+            R.drawable.img_cfp_youn
         )
         list.add(one)
         list.add(two)

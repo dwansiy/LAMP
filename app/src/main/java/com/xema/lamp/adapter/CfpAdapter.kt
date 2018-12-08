@@ -9,17 +9,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.xema.lamp.R
 import com.xema.lamp.common.PreferenceHelper
 import com.xema.lamp.common.makeMeetingEmailString
 import com.xema.lamp.data.Cfp
 import com.xema.lamp.ui.TaxActivity
 import kotlinx.android.synthetic.main.item_cfp.view.*
-
-/**
- * Created by xema0 on 2018-02-25.
- */
 
 class CfpAdapter(private val context: Context, private val list: List<Cfp>) :
     RecyclerView.Adapter<CfpAdapter.ListItemViewHolder>() {
@@ -32,6 +28,7 @@ class CfpAdapter(private val context: Context, private val list: List<Cfp>) :
     override fun onBindViewHolder(holder: ListItemViewHolder, position: Int) {
         val cfp = list[position]
 
+        Glide.with(context).load(cfp.profileImageResourceId).into(holder.rivProfile)
         holder.tvName.text = cfp.name
         holder.rvRating.rating = cfp.rating
         holder.tvRating.text = cfp.getRatingString()
@@ -41,7 +38,8 @@ class CfpAdapter(private val context: Context, private val list: List<Cfp>) :
         holder.btnContact.setOnClickListener {
             val tax = PreferenceHelper.loadTax(context)
             if (tax == null) {
-                Snackbar.make(holder.itemView, "연말정산 내역을 먼저 등록해주세요", Snackbar.LENGTH_LONG).setActionTextColor(ContextCompat.getColor(context,R.color.colorYellow)).setAction("등록하기") {
+                Snackbar.make(holder.itemView, "연말정산 내역을 먼저 등록해주세요", Snackbar.LENGTH_LONG)
+                    .setActionTextColor(ContextCompat.getColor(context, R.color.colorYellow)).setAction("등록하기") {
                     context.startActivity(Intent((context), TaxActivity::class.java))
                 }.show()
             } else {

@@ -21,23 +21,15 @@
                     android:src="@drawable/bg_cfp_blue"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"/>
-
             <com.makeramen.roundedimageview.RoundedImageView
-                    android:layout_gravity="center_horizontal|bottom"
-                    android:src="@color/colorWhite"
+                    android:id="@+id/riv_profile"
                     android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:src="@drawable/img_cfp_ahn"
                     app:riv_corner_radius="100dp"
                     android:layout_width="70dp"
                     app:riv_border_width="1px"
                     app:riv_border_color="@color/colorGray4"
-                    android:layout_height="70dp"/>
-
-            <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/riv_profile"
-                    android:layout_gravity="center_horizontal|bottom"
-                    android:src="@drawable/ic_profile_default"
-                    android:layout_width="70dp"
-                    app:riv_corner_radius="100dp"
                     android:layout_height="70dp"/>
 
         </FrameLayout>
